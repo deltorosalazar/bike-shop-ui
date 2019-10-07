@@ -275,3 +275,26 @@ p.white {
     }
   }
 }
+
+.header__left-arrow,
+.header__right-arrow {
+  background-color: var(--orange);
+  height: 8.72rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8.72rem;
+}
+
+.header__left-arrow {
+  clip-path: polygon(50% 0%, 50% 100%, 100% 50%);
+  left: 0;
+  margin-left: -4.36rem;
+}
+.header__right-arrow {
+  clip-path: polygon(50% 0%, 50% 100%, 0% 50%);
+  margin-right: -4.36rem;
+  right: 0;
+}
+
+
