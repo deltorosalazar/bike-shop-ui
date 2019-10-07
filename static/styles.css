@@ -4,23 +4,24 @@
   margin: 0;
 }
 
-html {
-  font-size: 25px;
-  color: black;
-}
-
 @font-face {
   font-family: "GoogleSans";
-  src: url("fonts/ProductSans-Medium.woff") format("woff");
-  font-weight: 400
+  src: url("fonts/ProductSans-Regular.woff") format("woff");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "GoogleSans";
   src: url("fonts/ProductSans-Bold.woff") format("woff");
-  font-weight: 600
+  font-weight: 600;
 }
 
+html {
+  color: black;
+  font-family: 'GoogleSans';
+  font-size: 25px;
+  letter-spacing: 0.4px;
+}
 
 /* VARIABLES */
 /*************/
@@ -30,39 +31,75 @@ html {
 
 /* TYPOGRAPHY */
 /*************/
-h1, h2 {
-  font-family: 'GoogleSans';
+.bold {
   font-weight: 600;
 }
 
-a, p {
-  font-family: 'GoogleSans';
+.regular {
   font-weight: 400;
 }
 
-h1.title { font-size: 4rem; } /* 100px */
-h1.title { font-size: 2rem; } /* 50px */
+h1.title {
+  font-size: 4rem;
+} /* 100px */
+h1.subtitle {
+  font-size: 2rem;
+} /* 50px */
 
-h2.title { font-size: 1.8rem; } /* 45px */
+h2.title {
+  font-size: 1.8rem;
+} /* 45px */
 
-p.large { font-size: 1.2rem; } /* 30px */
-a.medium, p.medium { font-size: 1rem; } /* 25px */
-p.small { font-size: .6rem; } /* 15px */
+p.large {
+  font-size: 1.2rem;
+} /* 30px */
+a.medium, p.medium {
+  font-size: 1rem;
+} /* 25px */
+p.small {
+  font-size: .8rem;
+} /* 20px */
+p.extra-small {
+  font-size: .6rem;
+} /* 15px */
 
+h1.orange,
+p.orange {
+  color: var(--orange);
+}
+
+h1.white,
+p.white {
+  color: white;
+}
 
 /* COMPONENTS */
 /**************/
 
 /* 1. Navbar */
 .nav {
-  /* margin: 1.48rem 5.6rem 0 2.56rem; */
+  margin: 0rem 5.6rem 0 2.56rem;
+  padding: 1.48rem;
+}
+
+.nav__top {
+  display: none;
+}
+
+.nav__toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__toggle img {
+  width: 40px;
+}
+
+.nav__bottom {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  left: 2.56rem;
-  position: absolute;  
-  top: 1.48rem;
-  width: 100%;
 }
 
 .nav__logo span {
@@ -88,9 +125,7 @@ p.small { font-size: .6rem; } /* 15px */
   margin-right: 2.56rem;
 }
 
-.nav__menu__item {
-  
-}
+.nav__menu__item {}
 
 .nav__menu__item:not(:last-child) {
   margin-right: 2rem;
@@ -102,13 +137,12 @@ p.small { font-size: .6rem; } /* 15px */
   padding: 1;
 }
 
-.nav__menu__link:hover, 
+.nav__menu__link:hover,
 .nav__menu__link.active {
   color: var(--orange);
   text-decoration: none;
   border-bottom: 2px solid var(--orange);
 }
-
 
 /* 2. Button */
 .btn {
@@ -118,15 +152,126 @@ p.small { font-size: .6rem; } /* 15px */
   color: white;
 }
 
-
 /* SECTIONS */
 /**************/
 
-.header {  
+.header {
   background-image: url("images/header-background.jpg");
   background-size: cover;
   height: 100vh;
   position: relative;
 }
 
+.header__content {
+  left: 11.12rem;
+  position: absolute;
+  top: 13.24rem;
+  width: 25.6rem;
+}
 
+.header__content__text {
+  margin-bottom: 3.48rem;
+}
+
+.header__content__text h1.subtitle {
+  margin-bottom: 1rem;
+}
+
+.header__content__buttons  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__content__buttons .btn {
+  width: 12.16rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+/* MEDIA QUERIES */
+/*****************/
+
+@media (max-width: 1500px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+
+  /* COMPONENTS */
+  /**************/
+
+  /* 1. Navbar */
+  .nav__top {
+    display: block;
+  }
+
+  .nav__toggle[active] .nav__menu-container {
+    display: none;
+  }
+
+  .nav__bottom {
+    flex-direction: column;
+    left: 50%;
+    position: absolute;
+    top: 2.40rem;
+    transform: translateX(-50%);
+  }
+
+  .nav__logo {
+    margin-bottom: 2rem;
+  }
+
+  .nav__menu-container {
+    display: none;
+  }
+
+  .nav[open] .nav__menu-container {
+    display: block;
+    flex-direction: column;
+  }
+
+  .nav__menu-container .login-button {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .nav__menu {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__menu__item:not(:last-child),
+  .nav__menu__item:last-child {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* SECTIONS */
+  /**************/
+
+  .nav[open] + .header__content {
+    top: 40rem;    
+  }
+
+  @media (max-width: 768px) {
+    .header__content {
+      left: 50%;      
+      top: 13.24rem;
+      transform: translateX(-50%);
+      width: 25.6rem;
+    }
+  }
+}
