@@ -1,0 +1,132 @@
+/* RESET */
+/*********/
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 25px;
+  color: black;
+}
+
+@font-face {
+  font-family: "GoogleSans";
+  src: url("fonts/ProductSans-Medium.woff") format("woff");
+  font-weight: 400
+}
+
+@font-face {
+  font-family: "GoogleSans";
+  src: url("fonts/ProductSans-Bold.woff") format("woff");
+  font-weight: 600
+}
+
+
+/* VARIABLES */
+/*************/
+:root {
+  --orange: #EF8216;
+}
+
+/* TYPOGRAPHY */
+/*************/
+h1, h2 {
+  font-family: 'GoogleSans';
+  font-weight: 600;
+}
+
+a, p {
+  font-family: 'GoogleSans';
+  font-weight: 400;
+}
+
+h1.title { font-size: 4rem; } /* 100px */
+h1.title { font-size: 2rem; } /* 50px */
+
+h2.title { font-size: 1.8rem; } /* 45px */
+
+p.large { font-size: 1.2rem; } /* 30px */
+a.medium, p.medium { font-size: 1rem; } /* 25px */
+p.small { font-size: .6rem; } /* 15px */
+
+
+/* COMPONENTS */
+/**************/
+
+/* 1. Navbar */
+.nav {
+  /* margin: 1.48rem 5.6rem 0 2.56rem; */
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 2.56rem;
+  position: absolute;  
+  top: 1.48rem;
+  width: 100%;
+}
+
+.nav__logo span {
+  color: var(--orange);
+}
+
+.nav__menu-container {
+  align-items: center;
+  display: flex;
+}
+
+.nav__menu-container .login-button {
+  font-family: "GoogleSans";
+  font-size: 1rem;
+  height: 2.24rem;
+  margin-right: 1.76rem;
+  width: 5.52rem;
+}
+
+.nav__menu {
+  display: flex;
+  list-style: none;
+  margin-right: 2.56rem;
+}
+
+.nav__menu__item {
+  
+}
+
+.nav__menu__item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.nav__menu__link:link {
+  color: white;
+  text-decoration: none;
+  padding: 1;
+}
+
+.nav__menu__link:hover, 
+.nav__menu__link.active {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 2px solid var(--orange);
+}
+
+
+/* 2. Button */
+.btn {
+  border: none;
+  border-radius: 0;
+  background-color: var(--orange);
+  color: white;
+}
+
+
+/* SECTIONS */
+/**************/
+
+.header {  
+  background-image: url("images/header-background.jpg");
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+
