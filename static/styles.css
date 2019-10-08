@@ -25,8 +25,9 @@ html {
 
 /* VARIABLES */
 /*************/
-:root {
+:root {  
   --orange: #EF8216;
+  --red: #FE2727;
 }
 
 /* TYPOGRAPHY */
@@ -64,13 +65,20 @@ p.extra-small {
 } /* 15px */
 
 h1.orange,
-p.orange {
+p.orange,
+span.orange {
   color: var(--orange);
 }
 
 h1.white,
-p.white {
+p.white,
+span.white {
   color: white;
+}
+
+h1.light-grey,
+p.light-grey {
+  color: var(--light-grey);
 }
 
 /* COMPONENTS */
@@ -150,7 +158,103 @@ p.white {
   border-radius: 0;
   background-color: var(--orange);
   color: white;
+  cursor: pointer;
 }
+
+.btn.upppercase {
+  text-transform: uppercase;
+}
+
+.btn.outline {
+  background-color: transparent;
+}
+
+.btn.outline.white {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn.outline.white:hover {
+  background-color: white;
+  color: var(--orange);
+}
+
+/* 3. Basic Bike */
+
+.basic-bike {
+  border: 1px solid #EFEFEF;
+  height: 23.92rem;
+  width: 15.92rem;
+}
+
+.basic-bike .basic-bike__image-container {
+  height: 15.92rem;
+  position: relative;
+  width: 100%;
+}
+
+.basic-bike .basic-bike__offer.red {
+  background-color: var(--red);
+}
+
+.basic-bike .basic-bike__offer.orange {
+  background-color: var(--orange);
+}
+
+.basic-bike .basic-bike__offer {
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 3.52rem;
+  justify-content: center;  
+  position: absolute;
+  right: .68rem;
+  top: .68rem;
+  width: 3.52rem;
+  z-index: 999;
+}
+
+.basic-bike .basic-bike__image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.basic-bike .basic-bike__info {
+  padding: .76rem .56rem .56rem .8rem;
+}
+
+.basic-bike .basic-bike__name {
+  margin-bottom: .2rem;
+}
+
+.basic-bike .basic-bike__score {
+  margin-bottom: .28rem;
+}
+
+.basic-bike .basic-bike__description {
+  margin-bottom: .56rem;
+}
+
+.basic-bike .basic-bike__buy {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basic-bike .basic-bike__buy-button {
+  height: 1.92rem;
+  width: 6.12rem;
+  font-size: 1rem;
+}
+
+/* 3. Container */
+.container {
+  margin: 7.3%;
+}
+
 
 /* SECTIONS */
 /**************/
@@ -188,18 +292,33 @@ p.white {
   font-size: 1rem;
 }
 
+.showcase__basic-bikes {
+  display: grid;    
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  row-gap: 1rem;
+}
+
 /* MEDIA QUERIES */
 /*****************/
 
-@media (max-width: 1500px) {
+@media (max-width: 1800px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .showcase__basic-bikes {   
+    grid-template-columns: repeat(3, 1fr);   
   }
 }
 
 @media (max-width: 1200px) {
   html {
-    font-size: 16px;
+    font-size: 17px;
+  }
+
+  .showcase__basic-bikes {   
+    grid-template-columns: repeat(3, 1fr);   
   }
 }
 
@@ -228,8 +347,13 @@ p.white {
     transform: translateX(-50%);
   }
 
-  .nav__logo {
+  nav .nav__logo {
     margin-bottom: 2rem;
+    display: flex;
+  }
+
+  nav .nav__logo h2.title.white {
+    display: inline-block !important;
   }
 
   .nav__menu-container {
@@ -259,24 +383,43 @@ p.white {
     margin-bottom: 2rem;
   }
 
+  .showcase__basic-bikes {   
+    grid-template-columns: repeat(2, 1fr);   
+  }
+
+
   /* SECTIONS */
   /**************/
 
   .nav[open] + .header__content {
     top: 40rem;    
   }
+}
 
-  @media (max-width: 768px) {
-    .header__content {
-      left: 50%;      
-      top: 13.24rem;
-      transform: translateX(-50%);
-      width: 25.6rem;
-    }
+@media (max-width: 768px) {
+  .header__content {
+    left: 50%;      
+    top: 13.24rem;
+    transform: translateX(-50%);
+    width: 25.6rem;
+  }
+
+  .showcase__basic-bikes {   
+    grid-template-columns: repeat(2, 1fr);   
   }
 }
 
-.header__left-arrow,
+@media (max-width: 678px) {
+  html {
+    font-size: 13px;
+  }
+
+  .showcase__basic-bikes {   
+    grid-template-columns: repeat(1, 1fr);   
+  }
+}
+
+/* .header__left-arrow,
 .header__right-arrow {
   background-color: var(--orange);
   height: 8.72rem;
@@ -295,6 +438,6 @@ p.white {
   clip-path: polygon(50% 0%, 50% 100%, 0% 50%);
   margin-right: -4.36rem;
   right: 0;
-}
+} */
 
 

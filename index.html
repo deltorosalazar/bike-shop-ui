@@ -1,85 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>OldGold</title>
-  <link rel="stylesheet" href="static/styles.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header__left-arrow"></div>
-    <div class="header__right-arrow"></div>
-    <nav class="nav">
-      <div class="nav__top">
-        <div class="nav__toggle">
-          <img src="static/images/bars.svg" alt="" srcset="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OldGold</title>
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- <div class="header__left-arrow"></div>
+      <div class="header__right-arrow"></div> -->
+      <nav class="nav">
+        <div class="nav__top">
+          <div class="nav__toggle">
+            <img src="static/images/bars.svg" alt="" srcset="" />
+          </div>
         </div>
-      </div>
-      <div class="nav__bottom">
-        <div class="nav__logo">
-          <h2 class="title bold"><span>Old</span>Gold</h2>
+        <div class="nav__bottom">
+          <div class="nav__logo">
+            <h2 class="title white">Old</h2>
+            <h2 class="title bold">Gold</h2>
+          </div>
+          <div class="nav__menu-container" active>
+            <ul class="nav__menu">
+              <li class="nav__menu__item">
+                <a href="#" class="nav__menu__link medium">
+                  Home
+                </a>
+              </li>
+              <li class="nav__menu__item">
+                <a href="#" class="nav__menu__link medium active">
+                  Kids
+                </a>
+              </li>
+              <li class="nav__menu__item">
+                <a href="#" class="nav__menu__link medium">
+                  Mountains
+                </a>
+              </li>
+              <li class="nav__menu__item">
+                <a href="#" class="nav__menu__link medium">
+                  BMX
+                </a>
+              </li>
+              <li class="nav__menu__item">
+                <a href="#" class="nav__menu__link medium">
+                  Flips
+                </a>
+              </li>
+              <li class="nav__menu__item">
+                <a href="#" class="nav__menu__link medium">
+                  Racing
+                </a>
+              </li>
+            </ul>
+            <button class="btn login-button">Login</button>
+            <img src="static/images/cart.svg" alt="" srcset="" />
+          </div>
         </div>
-        <div class="nav__menu-container" active>
-          <ul class="nav__menu">
-            <li class="nav__menu__item">
-              <a href="#" class="nav__menu__link medium">
-                Home
-              </a>
-            </li>
-            <li class="nav__menu__item">
-              <a href="#" class="nav__menu__link medium active">
-                Kids
-              </a>
-            </li>
-            <li class="nav__menu__item">
-              <a href="#" class="nav__menu__link medium">
-                Mountains
-              </a>
-            </li>
-            <li class="nav__menu__item">
-              <a href="#" class="nav__menu__link medium">
-                BMX
-              </a>
-            </li>
-            <li class="nav__menu__item">
-              <a href="#" class="nav__menu__link medium">
-                Flips
-              </a>
-            </li>
-            <li class="nav__menu__item">
-              <a href="#" class="nav__menu__link medium">
-                Racing
-              </a>
-            </li>
-          </ul>
-          <button class="btn login-button">Login</button>
-          <img src="static/images/cart.svg" alt="" srcset="">
-        </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="header__content">
-      <div class="header__content__text">
-        <h1 class="title orange bold">Perfection</h1>
-        <h1 class="subtitle white regular">In Every Shape</h1>
-        <p class="small white regular">Our brand new Fishbite Superbike Express 2018 with perfection in every detail and would blow your mind INSTANTLY!!</p>
+      <div class="header__content">
+        <div class="header__content__text">
+          <h1 class="title orange bold">Perfection</h1>
+          <h1 class="subtitle white regular">In Every Shape</h1>
+          <p class="small white regular">
+            Our brand new Fishbite Superbike Express 2018 with perfection in
+            every detail and would blow your mind INSTANTLY!!
+          </p>
+        </div>
+        <div class="header__content__buttons">
+          <button class="btn uppecase buy-now">Buy Now</button>
+          <button class="btn outline white take-a-look">Take A Look</button>
+        </div>
       </div>
-      <div class="header__content__buttons">
-        <button class="btn uppecase buy-now">Buy Now</button>
-        <button class="btn outline take-a-look">Take A Look</button>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section class="showcase-section"></section>
-  </main>
-  <footer class="footer">
-    <div class="hola"></div>
+    </header>
+    <main>
+      <section class="showcase">
+        <div class="container">
+          <div class="showcase__basic-bikes">
+            <div class="basic-bike">
+              <div class="basic-bike__image-container">
+                <img
+                  src="static/images/bicycle.jpg"
+                  alt=""
+                  class="basic-bike__image"
+                />
+              </div>
+              <div class="basic-bike__info">
+                <p class="medium regular basic-bike__name">
+                  Superbike Aldor 2018
+                </p>
+                <div class="basic-bike__score">
+                  <p class="small regular orange">(50)</p>
+                </div>
+                <p
+                  class="extra-small regular light-grey basic-bike__description"
+                >
+                  Short Sescription Here
+                </p>
+                <div class="basic-bike__buy">
+                  <p class="large bold orange basic-bike__price">$10000</p>
+                  <button class="btn uppercase basic-bike__buy-button">
+                    Buy
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="basic-bike">
+              <div class="basic-bike__image-container">
+                <div class="basic-bike__offer orange">
+                  <p class="medium bold">-10%</p>
+                </div>
+                <img
+                  src="static/images/bicycle.jpg"
+                  alt=""
+                  class="basic-bike__image"
+                />
+              </div>
+              <div class="basic-bike__info">
+                <p class="medium regular basic-bike__name">
+                  Superbike Aldor 2018
+                </p>
+                <div class="basic-bike__score">
+                  <p class="small regular orange">(50)</p>
+                </div>
+                <p
+                  class="extra-small regular light-grey basic-bike__description"
+                >
+                  Short Sescription Here
+                </p>
+                <div class="basic-bike__buy">
+                  <p class="large bold orange basic-bike__price">$10000</p>
+                  <button class="btn uppercase basic-bike__buy-button">
+                    Buy
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="basic-bike">
+              <div class="basic-bike__image-container">
+                <div class="basic-bike__offer red">
+                  <p class="medium bold uppercase">Hot</p>
+                </div>
+                <img
+                  src="static/images/bicycle.jpg"
+                  alt=""
+                  class="basic-bike__image"
+                />
+              </div>
+              <div class="basic-bike__info">
+                <p class="medium regular basic-bike__name">
+                  Superbike Aldor 2018
+                </p>
+                <div class="basic-bike__score">
+                  <p class="small regular orange">(50)</p>
+                </div>
+                <p
+                  class="extra-small regular light-grey basic-bike__description"
+                >
+                  Short Sescription Here
+                </p>
+                <div class="basic-bike__buy">
+                  <p class="large bold orange basic-bike__price">$10000</p>
+                  <button class="btn uppercase basic-bike__buy-button">
+                    Buy
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="basic-bike">
+              <div class="basic-bike__image-container">
+                <img
+                  src="static/images/bicycle.jpg"
+                  alt=""
+                  class="basic-bike__image"
+                />
+              </div>
+              <div class="basic-bike__info">
+                <p class="medium regular basic-bike__name">
+                  Superbike Aldor 2018
+                </p>
+                <div class="basic-bike__score">
+                  <p class="small regular orange">(50)</p>
+                </div>
+                <p
+                  class="extra-small regular light-grey basic-bike__description"
+                >
+                  Short Sescription Here
+                </p>
+                <div class="basic-bike__buy">
+                  <p class="large bold orange basic-bike__price">$10000</p>
+                  <button class="btn uppercase basic-bike__buy-button">
+                    Buy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
 
-  </footer>
-  
-  <script src="static/main.js"></script>
-</body>
+    <script src="static/main.js"></script>
+  </body>
 </html>
