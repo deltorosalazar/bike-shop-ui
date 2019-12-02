@@ -28,6 +28,7 @@ html {
 :root {  
   --orange: #EF8216;
   --red: #FE2727;
+  --white: #FFF;
 }
 
 /* TYPOGRAPHY */
@@ -139,10 +140,13 @@ p.light-grey {
   margin-right: 2rem;
 }
 
-.nav__menu__link:link {
+.nav__menu__link,
+.nav__menu__link:link,
+.nav__menu__link:visited {
   color: white;
-  text-decoration: none;
   padding: 1;
+  text-decoration: none;
+  transition: border-width .1s ease-in, color .3s ease-out;
 }
 
 .nav__menu__link:hover,
@@ -156,9 +160,22 @@ p.light-grey {
 .btn {
   border: none;
   border-radius: 0;
+  cursor: pointer;
+}
+
+btn:focus {
+  outline: none;
+}
+
+.btn.btn--solid {
   background-color: var(--orange);
   color: white;
-  cursor: pointer;
+  transition: background-color .1s ease-in, color .3s ease-out;
+}
+
+.btn.btn--solid:hover {
+  background-color: var(--white);
+  color: var(--orange);  
 }
 
 .btn.upppercase {
@@ -172,11 +189,12 @@ p.light-grey {
 .btn.outline.white {
   border: 1px solid white;
   color: white;
+  transition: background-color 0.5s ease;
 }
 
 .btn.outline.white:hover {
   background-color: white;
-  color: var(--orange);
+  color: var(--orange);  
 }
 
 /* 3. Basic Bike */
@@ -335,9 +353,13 @@ p.light-grey {
     display: block;
   }
 
-  .nav__toggle[active] .nav__menu-container {
-    display: none;
+  .nav__menu-container {
+    height: 100%;
   }
+
+  /* .nav__toggle[active] .nav__menu-container {
+    display: none;
+  } */
 
   .nav__bottom {
     flex-direction: column;
